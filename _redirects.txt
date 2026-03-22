@@ -1,0 +1,10 @@
+# Local SEO Redirects for Yuma County
+/yuma              /resources.html?cat=addiction  200
+/san-luis          /resources.html?cat=addiction  200
+/somerton          /resources.html?cat=addiction  200
+/wellton           /resources.html?cat=addiction  200
+/foothills         /resources.html?cat=addiction  200
+/gadsden           /resources.html?cat=addiction  200
+
+# Catch-all to prevent 404s
+/* /index.html                    200
