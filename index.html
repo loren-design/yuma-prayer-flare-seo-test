@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Flare | Know God Better Ministries Yuma</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        h1, h2 { font-family: 'Playfair Display', serif; }
+        body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
+        .flare-btn:active { transform: scale(0.95); }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen pb-20">
+
+    <nav class="p-6 flex justify-between items-center border-b border-white/10 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
+        <div class="text-amber-500 font-bold tracking-tighter text-xl leading-none">
+            KGB <span class="text-white block text-xs tracking-widest font-light">MINISTRIES</span>
+        </div>
+        <a href="#about" class="text-xs uppercase tracking-widest text-slate-400">Our Story</a>
+    </nav>
+
+    <main class="max-w-md mx-auto px-6 pt-10">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-bold mb-2">Send a Flare</h1>
+            <p class="text-slate-400">Immediate spiritual intercession for Yuma County.</p>
+        </header>
+
+        <div class="grid grid-cols-2 gap-4 mb-12">
+            <a href="resources.html?cat=addiction" class="flare-btn bg-slate-800 p-8 rounded-2xl border border-white/5 text-center hover:bg-slate-700 transition">
+                <span class="block text-3xl mb-2">🔥</span>
+                <span class="font-bold">Addiction</span>
+            </a>
+            <a href="resources.html?cat=anxiety" class="flare-btn bg-slate-800 p-8 rounded-2xl border border-white/5 text-center hover:bg-slate-700 transition">
+                <span class="block text-3xl mb-2">🌊</span>
+                <span class="font-bold">Anxiety</span>
+            </a>
+            <a href="resources.html?cat=depression" class="flare-btn bg-slate-800 p-8 rounded-2xl border border-white/5 text-center hover:bg-slate-700 transition">
+                <span class="block text-3xl mb-2">🌑</span>
+                <span class="font-bold">Depression</span>
+            </a>
+            <a href="resources.html?cat=marriage" class="flare-btn bg-slate-800 p-8 rounded-2xl border border-white/5 text-center hover:bg-slate-700 transition">
+                <span class="block text-3xl mb-2">💍</span>
+                <span class="font-bold">Marriage</span>
+            </a>
+        </div>
+
+        <section id="defense" class="bg-amber-600/10 border border-amber-600/20 rounded-3xl p-6 mb-12">
+            <h2 class="text-2xl font-bold text-amber-500 mb-4 text-center underline">Spiritual Self-Defense</h2>
+            <div class="space-y-4">
+                <details class="bg-slate-800/50 p-4 rounded-xl">
+                    <summary class="font-bold cursor-pointer">1. The Belt of Truth</summary>
+                    <p class="text-sm text-slate-300 mt-2 italic">Defeating the lies of the enemy with the reality of who God says you are.</p>
+                </details>
+                <details class="bg-slate-800/50 p-4 rounded-xl">
+                    <summary class="font-bold cursor-pointer">2. The Breastplate of Righteousness</summary>
+                    <p class="text-sm text-slate-300 mt-2 italic">Guarding your heart from shame through the finished work of Christ.</p>
+                </details>
+            </div>
+        </section>
+
+        <footer id="about" class="text-center text-slate-500 text-xs py-10">
+            <p class="mb-4 uppercase tracking-[0.2em]">Serving Yuma • Foothills • San Luis • Somerton</p>
+            <p class="mb-4">© 2026 Know God Better Ministries. Part of Ten2 Harvest Media.</p>
+            <div class="bg-red-900/20 border border-red-900/30 p-4 rounded text-left">
+                <strong>LEGAL:</strong> This is an informational faith-based resource. We are not licensed medical professionals. In crisis, call 988 or 911.
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
+    </script>
+</body>
+</html>

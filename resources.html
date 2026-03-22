@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuma Resources | Prayer Flare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen">
+    <nav class="p-4 bg-white shadow-sm flex justify-between items-center">
+        <a href="index.html" class="font-bold text-blue-900">← Back</a>
+        <div class="text-xs font-bold text-slate-400 uppercase">Yuma County Response</div>
+    </nav>
+
+    <div class="max-w-md mx-auto p-6">
+        <h1 id="title" class="text-3xl font-bold mb-6 capitalize">Local Help</h1>
+        <div id="list" class="space-y-4">
+            </div>
+    </div>
+
+    <script>
+        const data = {
+            addiction: [
+                { name: "Crossroads Mission Yuma", addr: "944 S Arizona Ave", link: "https://crossroadsmission.org" },
+                { name: "Celebrate Recovery (Grace Bible)", addr: "Fortuna Foothills", link: "#" }
+            ],
+            anxiety: [
+                { name: "KGB Spiritual Coaching", addr: "Online/Local", link: "#" },
+                { name: "Horizon Health", addr: "2851 S Ave B", link: "#" }
+            ]
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const cat = params.get('cat') || 'addiction';
+        document.getElementById('title').innerText = cat + " Support";
+        
+        const list = document.getElementById('list');
+        (data[cat] || data['addiction']).forEach(item => {
+            list.innerHTML += `
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
+                    <h3 class="font-bold text-blue-900">${item.name}</h3>
+                    <p class="text-sm text-slate-500 mb-3">${item.addr}</p>
+                    <a href="${item.link}" class="inline-block bg-blue-600 text-white text-xs px-4 py-2 rounded-full font-bold">Connect Now</a>
+                </div>`;
+        });
+    </script>
+</body>
+</html>
